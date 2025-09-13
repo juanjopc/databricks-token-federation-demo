@@ -25,11 +25,14 @@ jobs:
       - name: Install Databricks CLI
         uses: databricks/setup-cli@main
       
-      - name: Test - Show current user
-        run: databricks current-user me
+      - name: Test - Show service principal info
+        run: databricks account service-principals get 142053800559278
         
       - name: Test - List workspaces
-        run: databricks account workspaces list || echo "No workspaces or no permission"
+        run: databricks account workspaces list || echo "No workspaces found"
+        
+      - name: Test - List account users
+        run: databricks account users list --limit 5 || echo "No permission to list users"
         
       - name: Success message
         run: echo "🎉 Token Federation funciona correctamente!"
