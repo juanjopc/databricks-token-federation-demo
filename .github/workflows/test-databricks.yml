@@ -13,7 +13,7 @@ jobs:
     environment: prod  # DEBE coincidir con el environment creado
     
     env:
-      DATABRICKS_AUTH_TYPE: github-oidc-azure
+      DATABRICKS_AUTH_TYPE: github-oidc
       DATABRICKS_HOST: https://accounts.azuredatabricks.net
       DATABRICKS_ACCOUNT_ID: 5955cca0-8ac1-4e1f-b284-cdab0a302c45
       DATABRICKS_CLIENT_ID: a9ed4ecc-deab-4e2a-97b2-2ab9f2e5f09e
